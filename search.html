@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<head>
+    <title>search</title>
+</head>
+<body>
+    <form action="/result/" method="POST">
+        <input type="text" name="name">
+        <input type="submit" value="search">
+    </form>
+    <ul>
+    {{range $row := .Link.Content}}
+    {{range $element := $row.RowItem}}
+    {{$element}}
+    {{end}}
+    {{end}}
+    </ul>
+</body>
